@@ -9,24 +9,22 @@
   <span class="ds-prx" title="Proxy estimate — calculated from available data (see tooltip for formula)">~</span>
   <span class="ds-trd" title="3rd Party — web search / trade databases / Jerri's Excel (not directly internal data)">🔍</span>
   <span class="ds-na"  title="No source — industry knowledge estimate only">?</span>
-</div><main class="max-w-7xl mx-auto px-4 py-6 space-y-6"><section><div style="display:flex;gap:2px;margin-bottom:16px"><button onclick="switchTopTab('bi')" id="stb-bi" class="text-[10px] px-4 py-2 rounded-t-lg font-bold border border-b-0 transition-all cursor-pointer" style="background:#1a2640;color:#fff;border-color:#2a3a50">Basic Information</button><button onclick="switchTopTab('rp')" id="stb-rp" class="text-[10px] px-4 py-2 rounded-t-lg font-bold border border-b-0 transition-all cursor-pointer" style="background:#111827;color:#8899b4;border-color:#2a3a50">Risk Profile</button></div><div id="rp-bi-view">
+</div><main class="max-w-7xl mx-auto px-4 py-6 space-y-6"><section><div style="display:flex;gap:2px;margin-bottom:16px"><button onclick="switchTopTab('bi')" id="stb-bi" class="text-[10px] px-4 py-2 rounded-t-lg font-bold border border-b-0 transition-all cursor-pointer" style="background:#1a2640;color:#fff;border-color:#2a3a50">Basic Information</button><button onclick="switchTopTab('rp')" id="stb-rp" class="text-[10px] px-4 py-2 rounded-t-lg font-bold border border-b-0 transition-all cursor-pointer" style="background:#111827;color:#8899b4;border-color:#2a3a50">Risk Profile</button></div><div id="rp-rp-view" style="display:none"><div class="grid grid-cols-1 lg:grid-cols-3 gap-4"><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50]" style="align-self:stretch;display:flex;flex-direction:column;justify-content:center;"><div id="ga-radar-chart" style="width:100%;height:280px;"></div></div><div class="lg:col-span-2" style="display:flex;flex-direction:column;"><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50]" style="flex:1;"><div class="flex gap-2 mb-4"><button id="btn-sd" onclick="switchRiskTab('sd')" class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/40">Score Detail</button><button id="btn-st" onclick="switchRiskTab('st')" class="text-xs px-3 py-1 rounded-full text-[#c8d6e8] hover:text-white">Score Trend</button></div><div id="ga-score-trend" style="display:none;height:200px;width:100%;margin-top:12px"></div><div class="space-y-0"><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Quality</span><span class="text-xs text-[#c8d6e8]">4.55/15</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:89%"></div></div><span class="text-xs text-[#8899b4]">▲</span></div></button><table class="w-full text-xs mb-3" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Product Risk</td><td class="py-1.5">-</td><td class="py-1.5 text-right">0</td><td class="py-1.5 text-right">12.5%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Order Volume</td><td class="py-1.5">28,263.24</td><td class="py-1.5 text-right">0.5</td><td class="py-1.5 text-right">12.5%</td><td class="py-1.5 text-right font-semibold text-white">0.94</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Defect Rate</td><td class="py-1.5">0.75%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">25%</td><td class="py-1.5 text-right text-emerald-400 font-medium">2.51</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Final Insp. Pass Rate</td><td class="py-1.5">97.92%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">45%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.52</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Re-inspection</td><td class="py-1.5">-</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">0.75</td></tr></tbody></table></div><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Performance</span><span class="text-xs text-[#c8d6e8]">29.93/45</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:77%"></div></div><span class="text-xs text-[#8899b4]">▼</span></div></button><table class="w-full text-xs mb-3" style="display:none" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Shipment Delay Days</td><td class="py-1.5">12.07 days</td><td class="py-1.5 text-right">0.33</td><td class="py-1.5 text-right">50%</td><td class="py-1.5 text-right text-red-400 font-medium">7.43</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Claim Rate</td><td class="py-1.5">-</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">15%</td><td class="py-1.5 text-right text-emerald-400 font-medium">6.75</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">No. of Yr Txn</td><td class="py-1.5">5 years</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">4.5</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Active Past 2 Years</td><td class="py-1.5">Yes</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">25%</td><td class="py-1.5 text-right text-emerald-400 font-medium">11.25</td></tr></tbody></table></div><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Buyer/Supplier</span><span class="text-xs text-[#c8d6e8]">26.65/40</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:77%"></div></div><span class="text-xs text-[#8899b4]">▼</span></div></button><table class="w-full text-xs mb-3" style="display:none" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Product Focus</td><td class="py-1.5">2</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Years of Operation</td><td class="py-1.5">7</td><td class="py-1.5 text-right">0.33</td><td class="py-1.5 text-right">15%</td><td class="py-1.5 text-right font-semibold text-white">1.98</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Relationship Length</td><td class="py-1.5">6</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Well Known Brands</td><td class="py-1.5">1</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Buyer Concentration (Top 3)</td><td class="py-1.5">0.55</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">No. of Buyers</td><td class="py-1.5">23</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right text-emerald-400 font-medium">2.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Core Buyer (Top10) Lost Ratio</td><td class="py-1.5">45.00%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">2.67</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Sales Turnover</td><td class="py-1.5">15,000,000.00</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">2.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Txn Frequency</td><td class="py-1.5">12</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Txn Volatility</td><td class="py-1.5">68.14%</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">2</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Payment Term</td><td class="py-1.5">120 Days</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Adverse News</td><td class="py-1.5">—</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right font-semibold text-white">—</td></tr></tbody></table></div></div></div></div></div></div><div id="rp-bi-view">
 <style>
-@keyframes bi-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .bi-sec{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8899b4;margin:14px 0 8px;display:flex;align-items:center;gap:8px}
 .bi-sec::after{content:'';flex:1;height:1px;background:#2a3a50}
 .bi-kpi{background:#1a2332;border:1px solid #2a3a50;border-radius:10px;padding:14px 12px;text-align:center}
 .bi-kpi-val{font-size:16px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:5px}
-.bi-kpi-lbl{font-size:11px;color:#475569;font-weight:600;letter-spacing:.02em}
+.bi-kpi-lbl{font-size:15px;color:#475569;font-weight:600;letter-spacing:.02em}
 .bi-hl{background:#1a2332;border:1px solid #2a3a50;border-radius:8px;padding:10px 12px}
 .bi-hl-lbl{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 .bi-hl-val{font-size:18px;font-weight:900}
 .ins{border:1px solid #2a3a50;border-radius:8px;padding:12px 14px;position:relative;overflow:hidden;background:#1a2332;transition:border-color .15s;margin-bottom:8px}
-.ins:last-child{margin-bottom:0}
-.ins:hover{border-color:#3b4f6a}
+.ins:last-child{margin-bottom:0}.ins:hover{border-color:#3b4f6a}
 .ins::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px}
 .ins.po::before{background:#22c55e}.ins.hi::before{background:#eab308}.ins.cr::before{background:#ef4444}
+.is{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
 .ins.po .is{color:#22c55e}.ins.hi .is{color:#eab308}.ins.cr .is{color:#ef4444}
-.is{font-size:9px;font-weight:700;margin-bottom:8px}
 .ins-row{display:flex;gap:6px;align-items:baseline;margin-bottom:4px}
 .ins-lbl{font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;min-width:34px;padding:2px 5px;border-radius:4px;text-align:center;flex-shrink:0;line-height:1.4}
 .ins-lbl.news{background:#1e2d40;color:#64748b}
@@ -36,40 +34,35 @@
 .ins-txt b{color:#c8d6e8}
 .ins-what{font-size:10px;color:#c8d6e8;line-height:1.55;font-weight:600}
 .ins-ref{font-size:8px;color:#334155;margin-top:6px;font-style:italic;padding-top:5px;border-top:1px solid #1e2d40}
+.bi-pp{background:#1a2332;border:1px solid #2a3a50;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
 .bi-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
-.bi-col{display:flex;flex-direction:column}
+.bi-col{display:flex;flex-direction:column;gap:8px}
 .bi-col-scroll{overflow-y:auto;flex:1;padding-right:4px}
 .bi-col-scroll::-webkit-scrollbar{width:3px}
 .bi-col-scroll::-webkit-scrollbar-track{background:#0d1829;border-radius:3px}
 .bi-col-scroll::-webkit-scrollbar-thumb{background:#2a3a50;border-radius:3px}
 .bi-col-scroll::-webkit-scrollbar-thumb:hover{background:#3b4f6a}
-.bi-pp{background:#1a2332;border:1px solid #2a3a50;border-radius:8px;overflow:hidden}
 </style>
 
-<!-- 4 KPI Metrics -->
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
   <div class="bi-kpi"><div class="bi-kpi-val">🇨🇳 China</div><div class="bi-kpi-lbl">Origin</div></div>
-  <div class="bi-kpi"><div class="bi-kpi-val" style="font-size:13px">RC &amp; Edu Toys</div><div class="bi-kpi-lbl">Category</div></div>
+  <div class="bi-kpi"><div class="bi-kpi-val" style="font-size:14px">RC &amp; Edu Toys</div><div class="bi-kpi-lbl">Category</div></div>
   <div class="bi-kpi"><div class="bi-kpi-val">$1–2.5M</div><div class="bi-kpi-lbl">Est. Revenue</div></div>
-  <div class="bi-kpi"><div class="bi-kpi-val" style="font-size:13px">USA · EU</div><div class="bi-kpi-lbl">Export Markets</div></div>
+  <div class="bi-kpi"><div class="bi-kpi-val" style="font-size:13px">USA · EU · AU</div><div class="bi-kpi-lbl">Export Markets</div></div>
 </div>
 
-<!-- Highlights -->
 <div class="bi-sec">Highlights</div>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
   <div class="bi-hl"><div class="bi-hl-lbl">Recognition</div><div class="bi-hl-val" style="color:#eab308">Growing</div><div style="font-size:8px;color:#475569;margin-top:2px">(40–59)</div></div>
   <div class="bi-hl"><div class="bi-hl-lbl">MOQ</div><div class="bi-hl-val" style="color:#22c55e">Low</div><div style="font-size:8px;color:#475569;margin-top:2px">100–499 units</div></div>
   <div class="bi-hl"><div class="bi-hl-lbl">Quality</div><div class="bi-hl-val" style="color:#ef4444">Needs Work</div><div style="font-size:8px;color:#475569;margin-top:2px">4.55 / 15</div></div>
-  <div class="bi-hl"><div class="bi-hl-lbl">Cost</div><div class="bi-hl-val" style="color:#22c55e">Competitive</div><div style="font-size:8px;color:#475569;margin-top:2px">Chenghai cluster</div></div>
-  <div class="bi-hl" style="border-color:#3b82f635"><div class="bi-hl-lbl">Active Buyers</div><div class="bi-hl-val" style="color:#f97316;font-size:20px">24</div><div style="font-size:8px;color:#475569;margin-top:2px">OA 120 days</div></div>
+  <div class="bi-hl"><div class="bi-hl-lbl">Cost</div><div class="bi-hl-val" style="color:#22c55e">Competitive</div><div style="font-size:8px;color:#475569;margin-top:2px">Chenghai base</div></div>
+  <div class="bi-hl" style="border-color:#3b82f635"><div class="bi-hl-lbl">Active Buyers</div><div class="bi-hl-val" style="color:#f97316;font-size:20px">24</div><div style="font-size:8px;color:#475569;margin-top:2px">OA terms</div></div>
 </div>
 
-<!-- Intel -->
 <div class="bi-sec">Intel</div>
 <div class="bi-2col">
-
-  <!-- LEFT: Pain Points -->
-  <div class="bi-col" style="gap:8px">
+  <div class="bi-col">
     <div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#64748b">Pain Points <span style="color:#334155;font-weight:400;font-style:italic;text-transform:none;letter-spacing:0">KB: COMBO-004</span></div>
 
     <div class="bi-pp">
@@ -79,11 +72,11 @@
         </div>
         <div style="flex:1;padding:10px 12px 10px 0">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">
-            <div style="font-size:11px;font-weight:800;color:#e2e8f0">Post-Shipment Cash Flow Gap</div>
+            <div style="font-size:11px;font-weight:800;color:#e2e8f0">US Tariff Pressure — Buyer Margin Squeeze</div>
             <span style="font-size:7px;font-weight:700;padding:1px 5px;border-radius:6px;background:#ef444415;color:#ef4444;border:1px solid #ef444430">Critical</span>
           </div>
-          <div style="font-size:9px;color:#64748b;line-height:1.6">OA terms lock cash for 120 days post-shipment. With ~$1–2.5M annual revenue spread across 24 buyers, receivables create structural working capital shortfall — raw materials for next orders must be paid before prior shipment is collected.</div>
-          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-001 · COMBO-004 · OA 120d exposure</div>
+          <div style="font-size:9px;color:#64748b;line-height:1.6">China toys face 145% US tariffs — cost flows downstream to suppliers as buyers demand price cuts or shift sourcing. Chenghai 2024 toy exports ¥10.24B but buyers squeezing margins directly. Banatoys' $1–2.5M revenue base makes tariff-driven order loss existential risk.</div>
+          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-REG-TARIFF-001 · COMBO-004 · DIM-1 China</div>
         </div>
       </div>
     </div>
@@ -95,11 +88,11 @@
         </div>
         <div style="flex:1;padding:10px 12px 10px 0">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">
-            <div style="font-size:11px;font-weight:800;color:#e2e8f0">Financing Cost Burden</div>
+            <div style="font-size:11px;font-weight:800;color:#e2e8f0">SAFE Cross-Border Complexity</div>
             <span style="font-size:7px;font-weight:700;padding:1px 5px;border-radius:6px;background:#ef444415;color:#ef4444;border:1px solid #ef444430">High</span>
           </div>
-          <div style="font-size:9px;color:#64748b;line-height:1.6">Domestic factoring rates in China 8–15% p.a. with hidden fees and complex approval. Sinosure insurance coverage adds cost but is required for certain export credit. Net financing cost squeezes already thin toy margins.</div>
-          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-002 · Domestic factoring friction · Sinosure cost</div>
+          <div style="font-size:9px;color:#64748b;line-height:1.6">SAFE (State Administration of Foreign Exchange) requires offshore receivable assignment registration — complex paperwork, delays. Combined with domestic factoring hidden fees and fragmented CN financing landscape, accessing trade finance is structurally difficult for small exporters.</div>
+          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-CN-001 · PP-002 · COMP-SAFE</div>
         </div>
       </div>
     </div>
@@ -111,11 +104,11 @@
         </div>
         <div style="flex:1;padding:10px 12px 10px 0">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">
-            <div style="font-size:11px;font-weight:800;color:#e2e8f0">US Tariff 145% Pressure</div>
+            <div style="font-size:11px;font-weight:800;color:#e2e8f0">CPSC &amp; REACH Compliance Cost Burden</div>
             <span style="font-size:7px;font-weight:700;padding:1px 5px;border-radius:6px;background:#ef444415;color:#ef4444;border:1px solid #ef444430">High</span>
           </div>
-          <div style="font-size:9px;color:#64748b;line-height:1.6">China toys face 145% effective US tariff (25% Sec.301 + IEEPA escalation). Even with 90-day truce, buyers are pushing back on pricing. CPSC compliance testing $300+/SKU adds further cost pressure on small-batch SKUs.</div>
-          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-REG-TARIFF-001 · CPSC testing burden · HS Ch.95</div>
+          <div style="font-size:9px;color:#64748b;line-height:1.6">US CPSC testing $300+ per SKU (lead, phthalates, choking hazard). EU REACH chemical compliance per product. For a small toy exporter with wide SKU range, compliance testing consumes disproportionate cash before first shipment. Quality score 4.55/15 signals gaps.</div>
+          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">REG-REACH · CPSC-CPSIA · PP-002 · Quality score 4.55/15</div>
         </div>
       </div>
     </div>
@@ -127,121 +120,120 @@
         </div>
         <div style="flex:1;padding:10px 12px 10px 0">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap">
-            <div style="font-size:11px;font-weight:800;color:#e2e8f0">SAFE Cross-Border &amp; Sinosure Complexity</div>
+            <div style="font-size:11px;font-weight:800;color:#e2e8f0">Sinosure Admin Burden</div>
             <span style="font-size:7px;font-weight:700;padding:1px 5px;border-radius:6px;background:#eab30815;color:#eab308;border:1px solid #eab30830">Medium</span>
           </div>
-          <div style="font-size:9px;color:#64748b;line-height:1.6">SAFE requires receivable assignment registration for cross-border factoring — adds 2–4 week delay. Sinosure monthly declaration burden: missing one cycle voids coverage retroactively. Administrative complexity limits financing options.</div>
-          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-CN-001 · PP-CN-002 · SAFE registration · Sinosure</div>
+          <div style="font-size:9px;color:#64748b;line-height:1.6">Monthly Sinosure declaration due by 15th — miss = coverage void for that month. 3+ days/month admin overhead. For a ~500-person factory, this is meaningful operational drag with no flexibility on the deadline.</div>
+          <div style="font-size:8px;color:#334155;margin-top:3px;font-style:italic">PP-CN-002 · COMP-SINOSURE · COMBO-004</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- RIGHT: Actionable Insights -->
   <div class="bi-col">
-    <div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#64748b;margin-bottom:6px">Actionable Insights <span style="color:#334155;font-weight:400;font-style:italic;text-transform:none;letter-spacing:0">market · buyer · compliance</span></div>
+    <div style="font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#64748b;margin-bottom:2px">Actionable Insights <span style="color:#334155;font-weight:400;font-style:italic;text-transform:none;letter-spacing:0">market · buyer · compliance</span></div>
     <div class="bi-col-scroll" style="max-height:420px">
 
       <div class="ins po">
-        <div class="is">Positive · US Tariff Truce Window — Lock In Orders Now</div>
-        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">90-day US-China tariff truce (through ~Aug 2025) created a short-term <b>order surge in Chenghai toy cluster</b>. July 2025 reports show buyers frontloading inventory ahead of potential tariff reinstatement. Banatoys well-positioned given US buyer base.</span></div>
-        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys has <b>active US buyers</b> (ROSS, Walgreens, TJX Australia). Truce window narrows post-Aug 2025 — buyers who haven't placed orders face 145% risk. Banatoys can offer urgency-driven pricing to lock commitments.</span></div>
-        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Proactively contact US buyers with capacity availability and confirmed lead times; offer Q3 booking incentives to capture truce-window orders before uncertainty returns.</span></div>
-        <div class="ins-ref">US-China truce July 2025 · Chenghai toy order surge · ROSS / Walgreens exposure</div>
+        <div class="is">Positive · EU Toy Safety Reg 2024 — Compliance Head Start</div>
+        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">EU's new Toy Safety Regulation (replacing Directive 2009/48/EC) tightens chemical limits, introduces <b>digital product passports</b>, and raises traceability requirements. EU buyers will demand updated compliance from 2026 onwards.</span></div>
+        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys exports to EU — early compliance documentation is a <b>buyer retention tool</b>. Competitors without updated REACH + new regulation docs will lose EU shelf space first.</span></div>
+        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Begin EU Toy Safety Reg gap assessment now; consolidate REACH testing certificates under new regulation format ahead of buyer requests.</span></div>
+        <div class="ins-ref">EU Toy Safety Regulation 2024 · Digital product passport · REACH · Effective 2026+</div>
       </div>
 
       <div class="ins hi">
-        <div class="is">High · EU Toy Safety Regulation 2024 — Update Compliance Docs</div>
-        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">New EU Toy Safety Regulation (replacing 2009/48/EC) tightening chemical limits (phthalates, heavy metals), mandatory digital labelling, and stricter REACH alignment. EU buyers will require <b>updated compliance documentation</b> from 2026.</span></div>
-        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys' EU buyers (Action Service, Tokmanni) will face mandatory supplier re-certification under the new regime. Existing EN71 certs may not cover all new requirements — <b>early compliance = competitive advantage</b>.</span></div>
-        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Audit current EN71 / REACH test reports against new EU Toy Safety Regulation requirements; initiate gap analysis and schedule updated third-party testing for top EU SKUs.</span></div>
-        <div class="ins-ref">EU Toy Safety Regulation 2024 · EN71 update · REACH alignment · Action / Tokmanni</div>
+        <div class="is">High · Amazon &amp; D2C Channel Shift — Diversify Buyer Base</div>
+        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">Online toy channels (Amazon, Walmart.com, direct-to-consumer) growing <b>15%+ annually</b> while traditional toy retail continues to consolidate. Amazon sellers now represent 35%+ of US toy sales.</span></div>
+        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys' current <b>24-buyer base is concentrated in traditional retail</b>. D2C/marketplace buyers place smaller, more frequent orders — exactly suited to Banatoys' low-MOQ capability and wide SKU range.</span></div>
+        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Target 5–8 Amazon FBA/marketplace seller accounts; use low MOQ as differentiator — pitch 100–499 unit trial runs with fast reorder cycles.</span></div>
+        <div class="ins-ref">Amazon toy channel growth · D2C shift · Low MOQ advantage · 2025–26</div>
       </div>
 
       <div class="ins hi">
-        <div class="is">High · Amazon &amp; D2C Channel Growth — Small-Batch Opportunity</div>
-        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">Online toy channels growing <b>15%+ annually</b>. Amazon marketplace sellers and D2C brands increasingly source direct from Chenghai manufacturers for small-batch, fast-turnaround SKUs — bypassing traditional wholesale importers.</span></div>
-        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys' <b>low MOQ (100–499 units)</b> and Chenghai cluster flexibility are perfectly suited for marketplace sellers who test SKUs in small quantities. This diversifies away from traditional retail buyer concentration risk.</span></div>
-        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Target Amazon FBA sellers and D2C toy brands in US/EU; offer 100-unit sampling + fast 30-day prototyping to win marketplace channel accounts beyond traditional retail buyers.</span></div>
-        <div class="ins-ref">Amazon marketplace growth · D2C toy brands · Low-MOQ differentiation · Chenghai cluster</div>
+        <div class="is">High · Tariff Pause Window — Lock In US Commitments Now</div>
+        <div class="ins-row"><span class="ins-lbl news">News</span><span class="ins-txt">90-day US–China tariff truce (mid-2025) created a <b>Chenghai order surge</b> — factories are seeing US buyers rush to pre-stock before tariffs resume. Window is time-limited.</span></div>
+        <div class="ins-row"><span class="ins-lbl why">Why</span><span class="ins-txt">Banatoys can capture <b>pre-tariff inventory orders</b> from US buyers stockpiling for holiday season. Failure to act = losing this demand to competitors who move faster.</span></div>
+        <div class="ins-row"><span class="ins-lbl what">What</span><span class="ins-what">Proactively approach US buyers with Q3/Q4 capacity confirmation; offer fixed pricing for pre-tariff purchase orders locked before truce expires.</span></div>
+        <div class="ins-ref">US–China 90-day truce · Chenghai order surge Jul 2025 · Pre-stock window closing</div>
       </div>
 
     </div>
   </div>
 </div>
-</div><div id="rp-rp-view" style="display:none"><div class="text-[10px] uppercase tracking-widest mb-3 font-semibold text-[#8899b4]">Risk Profile</div><div class="grid grid-cols-1 lg:grid-cols-3 gap-4"><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50]" style="align-self:stretch;display:flex;flex-direction:column;justify-content:center;"><div id="ga-radar-chart" style="width:100%;height:280px;"></div></div><div class="lg:col-span-2" style="display:flex;flex-direction:column;"><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50]" style="flex:1;"><div class="flex gap-2 mb-4"><button id="btn-sd" onclick="switchRiskTab('sd')" class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/40">Score Detail</button><button id="btn-st" onclick="switchRiskTab('st')" class="text-xs px-3 py-1 rounded-full text-[#c8d6e8] hover:text-white">Score Trend</button></div><div id="ga-score-trend" style="display:none;height:200px;width:100%;margin-top:12px"></div><div class="space-y-0"><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Quality</span><span class="text-xs text-[#c8d6e8]">4.55/15</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:89%"></div></div><span class="text-xs text-[#8899b4]">▲</span></div></button><table class="w-full text-xs mb-3" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Product Risk</td><td class="py-1.5">-</td><td class="py-1.5 text-right">0</td><td class="py-1.5 text-right">12.5%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Order Volume</td><td class="py-1.5">28,263.24</td><td class="py-1.5 text-right">0.5</td><td class="py-1.5 text-right">12.5%</td><td class="py-1.5 text-right font-semibold text-white">0.94</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Defect Rate</td><td class="py-1.5">0.75%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">25%</td><td class="py-1.5 text-right text-emerald-400 font-medium">2.51</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Final Insp. Pass Rate</td><td class="py-1.5">97.92%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">45%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.52</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Re-inspection</td><td class="py-1.5">-</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">0.75</td></tr></tbody></table></div><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Performance</span><span class="text-xs text-[#c8d6e8]">29.93/45</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:77%"></div></div><span class="text-xs text-[#8899b4]">▼</span></div></button><table class="w-full text-xs mb-3" style="display:none" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Shipment Delay Days</td><td class="py-1.5">12.07 days</td><td class="py-1.5 text-right">0.33</td><td class="py-1.5 text-right">50%</td><td class="py-1.5 text-right text-red-400 font-medium">7.43</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Claim Rate</td><td class="py-1.5">-</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">15%</td><td class="py-1.5 text-right text-emerald-400 font-medium">6.75</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">No. of Yr Txn</td><td class="py-1.5">5 years</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">4.5</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Active Past 2 Years</td><td class="py-1.5">Yes</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">25%</td><td class="py-1.5 text-right text-emerald-400 font-medium">11.25</td></tr></tbody></table></div><div class="border-b border-[#2a3a50]"><button class="w-full flex items-center justify-between py-2.5 text-left"><div class="flex items-center gap-3"><span class="text-sm font-semibold text-white">Buyer/Supplier</span><span class="text-xs text-[#c8d6e8]">26.65/40</span><span class="ds-val" title="Validated — internal data">✅</span></div><div class="flex items-center gap-2"><div class="w-24 h-1.5 rounded-full overflow-hidden bg-[#2a3a50]"><div class="h-full bg-blue-500 rounded-full" style="width:77%"></div></div><span class="text-xs text-[#8899b4]">▼</span></div></button><table class="w-full text-xs mb-3" style="display:none" data-subtable><thead><tr class="text-[#8899b4]"><th class="text-left py-1 font-normal">Attribute</th><th class="text-left py-1 font-normal">Value</th><th class="text-right py-1 font-normal">Score</th><th class="text-right py-1 font-normal">Wt</th><th class="text-right py-1 font-normal">Wtd</th></tr></thead><tbody><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Product Focus</td><td class="py-1.5">2</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Years of Operation</td><td class="py-1.5">7</td><td class="py-1.5 text-right">0.33</td><td class="py-1.5 text-right">15%</td><td class="py-1.5 text-right font-semibold text-white">1.98</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Relationship Length</td><td class="py-1.5">6</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Well Known Brands</td><td class="py-1.5">1</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Buyer Concentration (Top 3)</td><td class="py-1.5">0.55</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right text-emerald-400 font-medium">4.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">No. of Buyers</td><td class="py-1.5">23</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right text-emerald-400 font-medium">2.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Core Buyer (Top10) Lost Ratio</td><td class="py-1.5">45.00%</td><td class="py-1.5 text-right">0.67</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">2.67</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Sales Turnover</td><td class="py-1.5">15,000,000.00</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">2.00</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Txn Frequency</td><td class="py-1.5">12</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Txn Volatility</td><td class="py-1.5">68.14%</td><td class="py-1.5 text-right">1</td><td class="py-1.5 text-right">5%</td><td class="py-1.5 text-right font-semibold text-white">2</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Payment Term</td><td class="py-1.5">120 Days</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right">10%</td><td class="py-1.5 text-right font-semibold text-white">0</td></tr><tr class="text-[#c8d6e8] border-t border-[#1a2332]"><td class="py-1.5 text-white">Adverse News</td><td class="py-1.5">—</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right">—</td><td class="py-1.5 text-right font-semibold text-white">—</td></tr></tbody></table></div></div></div></div></div></div></section><section><div class="text-[10px] uppercase tracking-widest mb-3 font-semibold text-[#8899b4]">Supply Chain Flow <span class="ds-val" title="✅ Validated — confirmed internal data">✅</span></div><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50] "><div class="py-4"><div class="relative"><div class="absolute top-[24px] left-[10%] right-[10%] h-[3px] bg-gradient-to-r from-amber-500 via-green-500 via-60% via-blue-500 to-purple-500 rounded"></div><div class="relative flex justify-between px-[8%]"><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-amber-500 ring-2 ring-blue-400 ring-offset-2" style="--tw-ring-offset-color:#0f1117">📦</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PROCUREMENT</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#f59e0b20;color:#f59e0b">Partial Data</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#f59e0b20;color:#f59e0b">Medium Risk</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-green-500">🏭</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PRODUCTION</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Score 10/10</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Low Risk</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-blue-500">🚢</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">DELIVERY</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#ef444420;color:#ef4444">~200 Shipments</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#ef444420;color:#ef4444">High Risk ⚠️</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-purple-500">💰</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PAYMENT</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#a855f720;color:#a855f7">24 Buyers</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Low Risk</span></button></div></div></div></div></section>
+</div></section><section><div class="text-[10px] uppercase tracking-widest mb-3 font-semibold text-[#8899b4]">Supply Chain Flow <span class="ds-val" title="✅ Validated — confirmed internal data">✅</span></div><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50] "><div class="py-4"><div class="relative"><div class="absolute top-[24px] left-[10%] right-[10%] h-[3px] bg-gradient-to-r from-amber-500 via-green-500 via-60% via-blue-500 to-purple-500 rounded"></div><div class="relative flex justify-between px-[8%]"><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-amber-500 ring-2 ring-blue-400 ring-offset-2" style="--tw-ring-offset-color:#0f1117">📦</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PROCUREMENT</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#f59e0b20;color:#f59e0b">Partial Data</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#f59e0b20;color:#f59e0b">Medium Risk</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-green-500">🏭</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PRODUCTION</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Score 10/10</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Low Risk</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-blue-500">🚢</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">DELIVERY</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#ef444420;color:#ef4444">~200 Shipments</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#ef444420;color:#ef4444">High Risk ⚠️</span></button><button class="flex flex-col items-center"><div class="w-12 h-12 rounded-full flex items-center justify-center text-xl relative z-10 bg-purple-500">💰</div><span class="text-xs font-bold mt-2 tracking-wider" style="color:#ffffff">PAYMENT</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#a855f720;color:#a855f7">24 Buyers</span><span class="text-[10px] px-2 py-0.5 rounded-full mt-1 font-medium" style="background-color:#22c55e20;color:#22c55e">Low Risk</span></button></div></div></div></div></section>
 <section id="sec-production" style="display:none"><div class="text-[10px] uppercase tracking-widest mb-3 font-semibold text-[#8899b4]">Production Intelligence</div><div class="flex flex-wrap gap-2 mb-4 justify-between" style="display:flex!important"><div class="border rounded-lg px-4 py-2 text-center flex-1 min-w-[100px] bg-[#1a2332] border-[#2a3a50]"><div class="text-lg font-bold text-white">~500<span class="ds-prx" title="~ Proxy — estimated/calculated from available data">~</span></div><div class="text-[10px] uppercase tracking-wider text-[#8899b4]">Workers</div></div><div class="border rounded-lg px-4 py-2 text-center flex-1 min-w-[100px] bg-[#1a2332] border-[#2a3a50]"><div class="text-lg font-bold text-white">~20<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></div><div class="text-[10px] uppercase tracking-wider text-[#8899b4]">Lines</div></div><div class="border rounded-lg px-4 py-2 text-center flex-1 min-w-[100px] bg-[#1a2332] border-[#2a3a50]"><div class="text-lg font-bold text-white">420K<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></div><div class="text-[10px] uppercase tracking-wider text-[#8899b4]">Monthly Cap</div></div><div class="border rounded-lg px-4 py-2 text-center flex-1 min-w-[100px] bg-[#1a2332] border-[#2a3a50]"><div class="text-lg font-bold text-white">87%<span class="ds-val" title="✅ Validated — internal data">✅</span></div><div class="text-[10px] uppercase tracking-wider text-[#8899b4]">OTD</div></div><div class="border rounded-lg px-4 py-2 text-center flex-1 min-w-[100px] bg-[#1a2332] border-[#2a3a50]"><div class="text-lg font-bold text-white">97.92%<span class="ds-val" title="✅ Validated — internal data">✅</span></div><div class="text-[10px] uppercase tracking-wider text-[#8899b4]">1st Pass</div></div></div><div class="border rounded-lg p-4 bg-[#1a2332] border-[#2a3a50] mb-4"><div class="flex items-center justify-between flex-wrap gap-2 mb-4"><div class="flex items-center gap-2 flex-wrap"><span class="text-sm font-bold text-white">Chenghai Main Factory</span><span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">🇨🇳 China (Guangdong)</span><span class="text-[10px] px-2 py-0.5 rounded-full bg-green-500/20 text-emerald-400 font-medium">OTD 87%</span><span class="text-[10px] px-2 py-0.5 rounded-full bg-green-500/20 text-emerald-400 font-medium">ISO ✓</span><span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium">Private</span></div><span class="text-[10px] text-[#8899b4]">Updated: May 2026</span></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div><div class="text-[10px] uppercase tracking-widest mb-2 font-semibold text-[#8899b4]">Scale &amp; Delivery</div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Workers</span><span class="font-medium" style="color: rgb(255, 255, 255);">~500<span class="ds-prx" title="~ Proxy — internal range midpoint estimate">~</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Sewing Lines</span><span class="font-medium" style="color: rgb(255, 255, 255);">~20<span class="ds-trd"  title="? Estimated — no direct data source">?</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Lead Time</span><span class="font-medium" style="color: rgb(255, 255, 255);">45-60 Days FOB<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Annual Output</span><span class="font-medium" style="color: rgb(255, 255, 255);">~5M units/yr<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Monthly Cap</span><span class="font-medium" style="color: rgb(255, 255, 255);">420K units/mo<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">MOQ</span><span class="font-medium" style="color: rgb(255, 255, 255);">500-999 units<span class="ds-trd" title="🔍 3rd Party — company website / trade portal">🔍</span></span></div></div><div><div class="text-[10px] uppercase tracking-widest mb-2 font-semibold text-[#8899b4]">Quality Insight</div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">1st Pass Rate</span><span class="text-emerald-400 font-medium">97.92%<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Defect Rate</span><span class="font-medium" style="color: rgb(255, 255, 255);">0.75%<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Re-inspection</span><span class="font-medium" style="color: rgb(255, 255, 255);">0%<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Claim Ratio</span><span class="font-medium" style="color: rgb(255, 255, 255);">0%<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Audit (WRAP/ISO Certified)</span><span class="text-emerald-400 font-medium">Pass<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Product Exp.</span><span class="font-medium" style="color: rgb(255, 255, 255);">~8 yrs<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div></div><div><div class="text-[10px] uppercase tracking-widest mb-2 font-semibold text-[#8899b4]">Certifications</div><div class="flex flex-wrap gap-1.5 mb-3"><span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-500/20 text-blue-300">SEDEX</span><span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-500/20 text-blue-300">ISO Certified</span><span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-orange-500/20 text-orange-300">ISO 9001</span><span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-500/20 text-green-300">OEKO-TEX</span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Building Safety</span><span class="text-emerald-400 font-medium">Passed<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Fire Safety</span><span class="text-emerald-400 font-medium">Passed<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">Environmental</span><span class="text-emerald-400 font-medium">Passed<span class="ds-val" title="✅ Validated — internal data">✅</span></span></div><div class="flex items-center justify-between py-1.5 border-b text-xs border-[#2a3a50]/50"><span style="color: rgb(200, 214, 232);">QMS</span><span class="text-emerald-400 font-medium">In-house<span class="ds-val" title="Validated — internal data">✅</span></span></div></div></div></div><div class="text-[10px] uppercase tracking-widest mb-2 font-semibold text-[#8899b4]">Product Catalog <span class="ds-val" title="✅ Validated — confirmed internal data">✅</span></div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
   <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">🚗</div>
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
     <div class="p-3">
       <div class="text-sm font-bold text-white">RC Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">Radio-controlled cars, trucks & off-road · HS 9503.00</div>
+      <div class="text-xs mt-1 text-[#8899b4]">200 TC cotton percale · HS 63023130 / 63023920</div>
       <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 500 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">Action Service</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Tokmanni</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 1,000 sets</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Envogue International</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">Walmart</span>
       </div>
     </div>
   </div>
   <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">🧩</div>
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
     <div class="p-3">
       <div class="text-sm font-bold text-white">Educational Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">STEM kits, puzzles & building sets · HS 9503.00</div>
+      <div class="text-xs mt-1 text-[#8899b4]">Woven terry fabric · HS 630710</div>
       <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 300 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(139, 92, 246, 0.125); color: rgb(139, 92, 246);">Metro Sourcing</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(16, 185, 129, 0.125); color: rgb(16, 185, 129);">EU Retailers</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 2,000 pcs</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(139, 92, 246, 0.125); color: rgb(139, 92, 246);">Woolworth GMBH</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(16, 185, 129, 0.125); color: rgb(16, 185, 129);">Action Service</span>
       </div>
     </div>
   </div>
   <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">⚽</div>
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
     <div class="p-3">
       <div class="text-sm font-bold text-white">Sports Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">Mini sports sets, balls & activity kits · HS 9503.00</div>
+      <div class="text-xs mt-1 text-[#8899b4]">Commercial grade cotton bar mops · HS 630260</div>
       <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 500 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">ROSS</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">Amazon Sellers</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 1,000 pcs</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">US Retailers</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Food Service</span>
       </div>
     </div>
   </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
   <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">🏖️</div>
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
     <div class="p-3">
-      <div class="text-sm font-bold text-white">Beach Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">Sand & beach play sets, buckets & moulds · HS 9503.00</div>
+      <div class="text-sm font-bold text-white">Beach & Water</div>
+      <div class="text-xs mt-1 text-[#8899b4]">Cotton face cloths & washcloths · HS 630260</div>
       <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 500 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Walgreens</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 500 pcs</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Dollar General</span>
       </div>
     </div>
   </div>
   <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">💦</div>
-    <div class="p-3">
-      <div class="text-sm font-bold text-white">Water Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">Water guns, pools & sprinkler sets · HS 9503.00</div>
-      <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 500 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">TJX</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">US Retailers</span>
-      </div>
-    </div>
-  </div>
-  <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
-    <div style="background:#1a2332;display:flex;align-items:center;justify-content:center;height:80px;font-size:36px">🎯</div>
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
     <div class="p-3">
       <div class="text-sm font-bold text-white">Outdoor Toys</div>
-      <div class="text-xs mt-1 text-[#8899b4]">Frisbees, darts, outdoor games · HS 9503.00</div>
+      <div class="text-xs mt-1 text-[#8899b4]">Cotton kitchen & dish towels · HS 630260</div>
       <div class="flex flex-wrap gap-1.5 mt-2">
-        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 300 units</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(139, 92, 246, 0.125); color: rgb(139, 92, 246);">EU Specialty</span>
-        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(16, 185, 129, 0.125); color: rgb(16, 185, 129);">Amazon D2C</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 1,000 pcs</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(6, 182, 212, 0.125); color: rgb(6, 182, 212);">Coop Norge</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(59, 130, 246, 0.125); color: rgb(59, 130, 246);">Walmart, Inc.</span>
+      </div>
+    </div>
+  </div>
+  <div class="border rounded-lg overflow-hidden bg-[#1a2332] border-[#2a3a50]">
+    <div style="background:#141e2e;height:52px;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-size:20px">🎁</span><span style="font-size:11px;font-weight:700;color:#8899b4">🧵</span></div>
+    <div class="p-3">
+      <div class="text-sm font-bold text-white">Creative Toys</div>
+      <div class="text-xs mt-1 text-[#8899b4]">Cotton hand towels for hospitality · HS 630260</div>
+      <div class="flex flex-wrap gap-1.5 mt-2">
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium">MOQ 2,000 pcs</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(139, 92, 246, 0.125); color: rgb(139, 92, 246);">Hospitality</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: rgba(16, 185, 129, 0.125); color: rgb(16, 185, 129);">Healthcare</span>
       </div>
     </div>
   </div>
@@ -1136,7 +1128,7 @@ window.addEventListener('load', function() {
       var mx=document.getElementById('pay-mix');
       if(buyers)buyers.style.display=v==='buyers'?'':'none';
       if(ex){ex.style.display=v==='export'?'block':'none';if(v==='export'&&!ex.dataset.r){pie(ex,[['USA',42],['Germany',40],['Netherlands',16],['Norway',3],['Poland',2]]);ex.dataset.r='1';}}
-      if(mx){mx.style.display=v==='mix'?'block':'none';if(v==='mix'&&!mx.dataset.r){pie(mx,[['RC Toys',40],['Educational Toys',25],['Sports Toys',20],['Outdoor/Water/Beach',15]]);mx.dataset.r='1';}}
+      if(mx){mx.style.display=v==='mix'?'block':'none';if(v==='mix'&&!mx.dataset.r){pie(mx,[['Cotton Bed Linen',55],['Blended Bed Linen',25],['Cotton Towels',15],['Surgical Cotton',5]]);mx.dataset.r='1';}}
     };
   }
 
@@ -1290,59 +1282,7 @@ window.addEventListener('load', function() {
 })();
 </script>
 
-<style>@keyframes bi-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}</style>
-<script>
-var _stI=false;
-function initST(){
-  if(_stI||typeof echarts==="undefined")return;
-  var el=document.getElementById("ga-score-trend");
-  if(!el)return;
-  _stI=true;
-  var c=echarts.init(el,null,{renderer:"canvas"});
-  c.setOption({backgroundColor:"transparent",grid:{top:16,bottom:28,left:36,right:10},
-    xAxis:{type:"category",data:["Q1'24","Q2","Q3","Q4","Q1'25","Q2","Q3","Q4","Q1'26"],
-      axisLine:{lineStyle:{color:"#2a3a50"}},axisTick:{show:false},axisLabel:{color:"#64748b",fontSize:9}},
-    yAxis:{min:50,max:80,splitLine:{lineStyle:{color:"#1e2d40"}},axisLabel:{color:"#64748b",fontSize:9}},
-    tooltip:{trigger:"axis",backgroundColor:"#1a2640",borderColor:"#2a3a50",textStyle:{color:"#c8d6e8",fontSize:10}},
-    series:[{name:"Vendor Score",type:"line",data:[60,61,62,63,63,64,64,65,65],smooth:true,
-      symbol:"circle",symbolSize:5,itemStyle:{color:"#3b82f6"},lineStyle:{color:"#3b82f6",width:2},
-      areaStyle:{color:{type:"linear",x:0,y:0,x2:0,y2:1,
-        colorStops:[{offset:0,color:"rgba(59,130,246,.25)"},{offset:1,color:"rgba(59,130,246,.02)"}]}}}]});
-}
-function switchTopTab(t){
-  var rp=document.getElementById("rp-rp-view"),bi=document.getElementById("rp-bi-view"),
-      bRp=document.getElementById("stb-rp"),bBi=document.getElementById("stb-bi");
-  if(t==="bi"){
-    if(rp)rp.style.display="none";
-    if(bi){bi.style.display="";bi.style.animation="bi-in .3s ease-out";}
-    if(bRp){bRp.style.background="#111827";bRp.style.color="#8899b4";}
-    if(bBi){bBi.style.background="#1a2640";bBi.style.color="#fff";}
-  }else{
-    if(rp)rp.style.display="";
-    if(bi)bi.style.display="none";
-    if(bRp){bRp.style.background="#1a2640";bRp.style.color="#fff";}
-    if(bBi){bBi.style.background="#111827";bBi.style.color="#8899b4";}
-    setTimeout(function(){if(typeof echarts!=="undefined"){var rc=echarts.getInstanceByDom(document.getElementById("ga-radar-chart"));if(rc)rc.resize();}},50);
-  }
-}
-function switchRiskTab(t){
-  var sd=document.querySelector(".space-y-0"),st=document.getElementById("ga-score-trend"),
-      bSd=document.getElementById("btn-sd"),bSt=document.getElementById("btn-st");
-  var aOn="bg-blue-500/20 text-blue-400 border border-blue-500/40",aOff="text-[#c8d6e8] hover:text-white";
-  if(t==="st"){
-    if(sd)sd.style.display="none";
-    if(st){st.style.display="";setTimeout(initST,30);}
-    if(bSd)bSd.className=bSd.className.replace(aOn,aOff);
-    if(bSt)bSt.className=bSt.className.replace(aOff,aOn);
-  }else{
-    if(sd)sd.style.display="";
-    if(st)st.style.display="none";
-    if(bSd)bSd.className=bSd.className.replace(aOff,aOn);
-    if(bSt)bSt.className=bSt.className.replace(aOn,aOff);
-  }
-}
-</script>
-</body></html>
+<style>@keyframes bi-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}</style><script>var _stI=false;function initST(){if(_stI||typeof echarts==="undefined")return;var el=document.getElementById("ga-score-trend");if(!el)return;_stI=true;var c=echarts.init(el,null,{renderer:"canvas"});c.setOption({backgroundColor:"transparent",grid:{top:16,bottom:28,left:36,right:10},xAxis:{type:"category",data:["Q1'24","Q2","Q3","Q4","Q1'25","Q2","Q3","Q4","Q1'26"],axisLine:{lineStyle:{color:"#2a3a50"}},axisTick:{show:false},axisLabel:{color:"#64748b",fontSize:9}},yAxis:{min:40,max:80,splitLine:{lineStyle:{color:"#1e2d40"}},axisLabel:{color:"#64748b",fontSize:9}},tooltip:{trigger:"axis",backgroundColor:"#1a2640",borderColor:"#2a3a50",textStyle:{color:"#c8d6e8",fontSize:10}},series:[{name:"Vendor Score",type:"line",data:[58,61,63,64,63,64,65,65,65],smooth:true,symbol:"circle",symbolSize:5,itemStyle:{color:"#eab308"},lineStyle:{color:"#eab308",width:2},areaStyle:{color:{type:"linear",x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:"rgba(234,179,8,.25)"},{offset:1,color:"rgba(234,179,8,.02)"}]}}}]});}function switchTopTab(t){var rp=document.getElementById("rp-rp-view"),bi=document.getElementById("rp-bi-view"),bRp=document.getElementById("stb-rp"),bBi=document.getElementById("stb-bi");if(t==="bi"){if(rp)rp.style.display="none";if(bi){bi.style.display="";bi.style.animation="bi-in .3s ease-out";}if(bRp){bRp.style.background="#111827";bRp.style.color="#8899b4";}if(bBi){bBi.style.background="#1a2640";bBi.style.color="#fff";}}else{if(rp)rp.style.display="";if(bi)bi.style.display="none";if(bRp){bRp.style.background="#1a2640";bRp.style.color="#fff";}if(bBi){bBi.style.background="#111827";bBi.style.color="#8899b4";}setTimeout(function(){if(typeof echarts!=="undefined"){var rc=echarts.getInstanceByDom(document.getElementById("ga-radar-chart"));if(rc)rc.resize();}},50);}}function switchRiskTab(t){var sd=document.querySelector(".space-y-0"),st=document.getElementById("ga-score-trend"),bSd=document.getElementById("btn-sd"),bSt=document.getElementById("btn-st");var aOn="bg-blue-500/20 text-blue-400 border border-blue-500/40",aOff="text-[#c8d6e8] hover:text-white";if(t==="st"){if(sd)sd.style.display="none";if(st){st.style.display="";setTimeout(initST,30);}if(bSd)bSd.className=bSd.className.replace(aOn,aOff);if(bSt)bSt.className=bSt.className.replace(aOff,aOn);}else{if(sd)sd.style.display="";if(st)st.style.display="none";if(bSd)bSd.className=bSd.className.replace(aOff,aOn);if(bSt)bSt.className=bSt.className.replace(aOn,aOff);}}</script></body></html>
 <style>
 /* Data source badges */
 .ds-val { display:inline-flex;align-items:center;gap:2px;font-size:8px;font-weight:700;
